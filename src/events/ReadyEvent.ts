@@ -1,7 +1,7 @@
 import { Events } from "discord.js";
-import EventType from "./EventType"
+import { Event } from "./Event.js"
 
-export default class ReadyEvent implements EventType {
+export default class ReadyEvent implements Event {
 	public id: string = "ready";
 	public type: string = Events.ClientReady;
 	public once = () => {
