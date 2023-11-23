@@ -4,13 +4,15 @@ import * as fs from "fs";
 import { Event } from "./Event.js";
 
 export default class EventManager {
-	private static filesIgnored = [ "EventManager.js", "Event.js" ]
-	public static registerEvents = (client: Client) => {
-		const eventsPath: URL = new URL(".", import.meta.url);
+    private static filesIgnored = ["EventManager.js", "Event.js"];
+    public static registerEvents = (client: Client) => {
+        const eventsPath: URL = new URL(".", import.meta.url);
 
-		fs.readdirSync(eventsPath).filter((f: string) => f.endsWith(".js") && !this.filesIgnored.includes(f)).forEach(async (eventFile: string) => {
-			let eventClass: Event  = new (await import(path.join(eventsPath.toString(), eventFile))).default();
-			client.on(eventClass.type, eventClass.once);
-		});		
-	}
+        fs.readdirSync(eventsPath)
+            .filter((f: string) => f.endsWith(".js") && !this.filesIgnored.includes(f))
+            .forEach(async (eventFile: string) => {
+                let eventClass: Event = new (await import(path.join(eventsPath.toString(), eventFile))).default();
+                client.on(eventClass.type, eventClass.once);
+            });
+    };
 }

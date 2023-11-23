@@ -1,5 +1,5 @@
 export interface Event {
-	id: string;
-	type: string;
-	once(...args: any[]): void;
+    id: string;
+    type: string;
+    once(...args: any[]): void;
 }

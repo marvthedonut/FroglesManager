@@ -1,32 +1,33 @@
 {
-  "name": "froglesmanager",
-  "version": "1.0.0",
-  "description": "Discord bot that manages Frogles Studio",
-  "type": "module",
-  "main": "build/index.js",
-  "scripts": {
-    "watch": "tsc --watch",
-	"clean": "rm -rf build/",
-    "build": "tsc",
-    "run": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/marvthedonut/FroglesManager.git"
-  },
-  "author": "XLFrie",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/marvthedonut/FroglesManager/issues"
-  },
-  "homepage": "https://github.com/marvthedonut/FroglesManager#readme",
-  "dependencies": {
-    "discord.js": "^14.14.1",
-    "dotenv": "^16.3.1",
-    "typescript": "^5.3.2"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0"
-  }
+    "name": "froglesmanager",
+    "version": "1.0.0",
+    "description": "Discord bot that manages Frogles Studio",
+    "type": "module",
+    "main": "build/index.js",
+    "scripts": {
+        "watch": "tsc --watch",
+        "clean": "rm -rf build/",
+        "build": "tsc",
+        "run": "node .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marvthedonut/FroglesManager.git"
+    },
+    "author": "XLFrie",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/marvthedonut/FroglesManager/issues"
+    },
+    "homepage": "https://github.com/marvthedonut/FroglesManager#readme",
+    "dependencies": {
+        "discord.js": "^14.14.1",
+        "dotenv": "^16.3.1",
+        "typescript": "^5.3.2"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "prettier": "3.1.0"
+    }
 }
