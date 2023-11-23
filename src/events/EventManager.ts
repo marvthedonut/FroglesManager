@@ -1,6 +1,6 @@
 import { Client } from "discord.js";
-import * as path from "path";
 import * as fs from "fs";
+import * as path from "path";
 import { Event } from "./Event.js";
 
 export default class EventManager {
