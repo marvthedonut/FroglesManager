@@ -4,6 +4,6 @@ import EventManager from "./events/EventManager.js";
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-EventManager.registerCommands(client);
+EventManager.registerEvents(client);
 
 client.login(process.env.TOKEN);
