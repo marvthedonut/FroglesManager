@@ -5,9 +5,9 @@
   "type": "module",
   "main": "build/index.js",
   "scripts": {
-	"watch": "tsc --watch",
-	"build": "rm -rf build && tsc",
-	"run": "node .",
+    "watch": "tsc --watch",
+    "build": "rm -rf build && tsc",
+    "run": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
