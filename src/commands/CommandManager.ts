@@ -31,4 +31,8 @@ export default class CommandManager {
         const res = await rest.put(Routes.applicationCommands("1176767417922355281"), { body: commandsData });
         console.log(`Deployed commands.`);
     };
+
+    public static getCommands = () => {
+        return this.commands.clone();
+    };
 }
