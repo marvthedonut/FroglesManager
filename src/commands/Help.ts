@@ -1,6 +1,8 @@
 import { Colors, CommandInteraction, EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import CommandManager from "./CommandManager.js";
 import { Command } from "./types/Command.js";
+import { SubCommandGroup } from "./types/SubCommandGroup.js";
+import { SubCommand } from "./types/SubCommand.js";
 
 export default class Help implements Command {
     public data: SlashCommandBuilder = new SlashCommandBuilder()
@@ -11,10 +13,14 @@ export default class Help implements Command {
         let description: string[] = [];
         const commands = CommandManager.getCommands();
 
-        commands.forEach((command) => {
-            description.push("**/" + command.data.name + "**");
-            description.push(command.data.description);
-            description.push("");
+        commands.forEach((command, key) => {
+            if ((<SubCommand | Command>command).interact !== undefined) {
+                description.push(
+                    "**/" + (key.includes("-_") ? key.split("-_")[0] + " " : "") + command.data.name + "**",
+                );
+                description.push(command.data.description);
+                description.push("");
+            }
         });
 
         let em = new EmbedBuilder()
