@@ -1,4 +1,4 @@
-import { CacheType, CommandInteraction, Events, Interaction } from "discord.js";
+import { Events, Interaction } from "discord.js";
 import CommandManager from "../commands/CommandManager.js";
 import { Event } from "./types/Event.js";
 
@@ -9,7 +9,7 @@ export default class _CommandInteraction implements Event {
     public once = (interaction: Interaction) => {
         if (interaction.isCommand()) {
             console.log(`${interaction.user.tag} just used ${interaction.commandName}.`);
-            CommandManager.callCommand(interaction as CommandInteraction<CacheType>);
+            CommandManager.callCommand(interaction);
         }
     };
 }
