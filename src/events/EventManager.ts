@@ -13,6 +13,7 @@ export default class EventManager {
             .forEach(async (eventFile: string) => {
                 let eventClass: Event = new (await import(path.join(eventsPath.toString(), eventFile))).default();
                 client.on(eventClass.type, eventClass.once);
+                console.log(`Loaded ${eventClass.id} into the event register.`);
             });
     };
 }
