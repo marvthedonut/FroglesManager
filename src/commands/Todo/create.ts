@@ -4,8 +4,10 @@ import { SubCommand } from "../types/SubCommand.js";
 export default class MeetingCreate implements SubCommand {
     public data: SlashCommandSubcommandBuilder = new SlashCommandSubcommandBuilder()
         .setName("create")
-        .setDescription("Create meeting");
+        .setDescription("Create todo item");
+    private messageId: string = "1177494073716785213";
+
     public interact = (interaction: CommandInteraction<CacheType>) => {
-        throw new Error("Method not implemented.");
+        interaction.reply({ content: "Shhh!", ephemeral: true });
     };
 }
