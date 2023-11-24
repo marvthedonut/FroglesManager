@@ -1,7 +1,7 @@
 import { Client } from "discord.js";
 import * as fs from "fs";
 import * as path from "path";
-import { Event } from "./Event.js";
+import { Event } from "./types/Event.js";
 
 export default class EventManager {
     private static filesIgnored = ["EventManager.js", "Event.js"];

@@ -1,6 +1,6 @@
 import { Colors, CommandInteraction, EmbedBuilder, SlashCommandBuilder } from "discord.js";
-import { Command } from "./Command.js";
 import CommandManager from "./CommandManager.js";
+import { Command } from "./types/Command.js";
 
 export default class Help implements Command {
     public data: SlashCommandBuilder = new SlashCommandBuilder()

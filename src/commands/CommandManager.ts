@@ -1,7 +1,7 @@
 import { CacheType, Client, Collection, CommandInteraction, REST, Routes } from "discord.js";
-import { Command } from "./Command.js";
 import * as fs from "fs";
 import * as path from "path";
+import { Command } from "./types/Command.js";
 
 export default class CommandManager {
     private static commands: Collection<string, Command> = new Collection();

@@ -1,6 +1,6 @@
 import { CacheType, CommandInteraction, Events, Interaction } from "discord.js";
 import CommandManager from "../commands/CommandManager.js";
-import { Event } from "./Event.js";
+import { Event } from "./types/Event.js";
 
 export default class _CommandInteraction implements Event {
     public id: string = "command_interaction";
