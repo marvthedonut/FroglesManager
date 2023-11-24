@@ -6,6 +6,7 @@ export default class Help implements Command {
     public data: SlashCommandBuilder = new SlashCommandBuilder()
         .setName("help")
         .setDescription("List all commands, description, and usage.");
+
     public interact = (interaction: CommandInteraction) => {
         let description: string[] = [];
         const commands = CommandManager.getCommands();

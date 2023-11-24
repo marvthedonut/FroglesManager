@@ -5,6 +5,7 @@ import { Event } from "./Event.js";
 
 export default class EventManager {
     private static filesIgnored = ["EventManager.js", "Event.js"];
+
     public static registerEvents = (client: Client) => {
         const eventsPath: URL = new URL(".", import.meta.url);
 
