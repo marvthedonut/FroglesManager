@@ -19,7 +19,10 @@ export default class Help implements Command {
         let em = new EmbedBuilder()
             .setColor(Colors.Green)
             .setTitle("Commands")
-            .setFooter({ text: "Requested by " + interaction.user.tag, iconURL: <string>interaction.user.avatarURL() })
+            .setFooter({
+                text: "Requested by " + interaction.user.displayName,
+                iconURL: <string>interaction.user.avatarURL(),
+            })
             .setTimestamp()
             .setDescription(description.join("\n"));
 
